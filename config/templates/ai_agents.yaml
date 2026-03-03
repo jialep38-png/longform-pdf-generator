@@ -1,0 +1,73 @@
+# AI Agent 开发课程模板
+meta:
+  name: "AI Agent 从原理到落地"
+  target_chars: 55000
+  tone: "架构思维为主，配合大量代码示例"
+
+chapters:
+  - title: "Agent 时代已经来了"
+    sections:
+      - { title: "从工具到自主体：AI 的进化之路", target_chars: 1200 }
+      - { title: "2025-2026 Agent 生态全景", target_chars: 1200 }
+      - { title: "Agent 能做什么（和不能做什么）", target_chars: 1000 }
+
+  - title: "Agent 核心原理"
+    sections:
+      - { title: "ReAct / Plan-and-Execute / Reflexion 范式", target_chars: 1500 }
+      - { title: "工具调用机制深入解析", target_chars: 1500, elements: [code_example] }
+      - { title: "规划与推理能力的来源", target_chars: 1200 }
+      - { title: "Agent 的记忆架构", target_chars: 1200 }
+
+  - title: "单 Agent 开发实战"
+    sections:
+      - { title: "选型：LangGraph vs CrewAI vs AutoGen vs 自研", target_chars: 1500 }
+      - { title: "第一个 Agent：搜索助手", target_chars: 2000, elements: [code_example] }
+      - { title: "进阶：带记忆的对话 Agent", target_chars: 1500, elements: [code_example] }
+      - { title: "工具开发与 MCP 协议", target_chars: 1500, elements: [code_example] }
+
+  - title: "多 Agent 协作系统"
+    sections:
+      - { title: "多 Agent 架构模式分类", target_chars: 1500 }
+      - { title: "Supervisor / Swarm / Hierarchical 实现", target_chars: 2000, elements: [code_example] }
+      - { title: "Agent 间通信与状态管理", target_chars: 1200 }
+      - { title: "冲突解决与共识机制", target_chars: 1200 }
+
+  - title: "Agent 的感知与行动"
+    sections:
+      - { title: "多模态输入：视觉/语音/文档", target_chars: 1500 }
+      - { title: "浏览器自动化 Agent", target_chars: 1500, elements: [code_example] }
+      - { title: "代码执行沙箱设计", target_chars: 1200 }
+      - { title: "API 集成与外部系统交互", target_chars: 1200 }
+
+  - title: "Agent 安全与可控性"
+    sections:
+      - { title: "Prompt 注入攻击与防御", target_chars: 1500 }
+      - { title: "权限控制与沙箱隔离", target_chars: 1200 }
+      - { title: "人机协作：Human-in-the-Loop", target_chars: 1200 }
+      - { title: "可解释性与审计追踪", target_chars: 1000 }
+
+  - title: "Agent 评估与优化"
+    sections:
+      - { title: "Agent 评估框架与指标", target_chars: 1200 }
+      - { title: "Benchmark 工具横评", target_chars: 1200 }
+      - { title: "成本优化与延迟控制", target_chars: 1200 }
+      - { title: "失败模式分析与自愈", target_chars: 1200 }
+
+  - title: "生产级 Agent 部署"
+    sections:
+      - { title: "架构设计与技术选型", target_chars: 1500 }
+      - { title: "容错、重试与降级策略", target_chars: 1200 }
+      - { title: "监控与可观测性", target_chars: 1200 }
+      - { title: "版本管理与灰度发布", target_chars: 1000 }
+
+  - title: "商业案例与变现"
+    sections:
+      - { title: "企业级 Agent 应用案例", target_chars: 1500 }
+      - { title: "Agent-as-a-Service 商业模式", target_chars: 1200 }
+      - { title: "个人开发者变现路径", target_chars: 1200 }
+
+  - title: "附录"
+    sections:
+      - { title: "Agent 开发工具速查表", target_chars: 1500 }
+      - { title: "术语表", target_chars: 1000 }
+      - { title: "推荐资源", target_chars: 800 }

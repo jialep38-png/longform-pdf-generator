@@ -1,0 +1,38 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Environment / secrets
+.env
+.env.*
+!.env.example
+
+# Build / logs / temp
+*.log
+*.tmp
+.DS_Store
+Thumbs.db
+dist/
+
+# Project runtime outputs
+data/output/*
+!data/output/.gitkeep
+data/raw/*
+!data/raw/.gitkeep
+data/vectordb/*
+!data/vectordb/.gitkeep
+data/generation.log
+
+# Local AI agent internal docs (not for OSS)
+.agentdocs/
+
+# Local conversation and private records
+完整会话记录_*.jsonl
+会话可读版总结_*.md
+
+# Node / frontend subproject artifacts
+text/openclaw101-main/node_modules/
+text/openclaw101-main/.next/
+text/openclaw101-main/out/

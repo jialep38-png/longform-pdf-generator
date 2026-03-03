@@ -1,0 +1,170 @@
+# 通用 AI 课程模板
+# 适用于大部分前沿 AI 技术主题
+
+meta:
+  name: "通用AI课程"
+  target_chars: 55000
+  tone: "专业但易懂，理论与实践结合"
+
+chapters:
+  - title: "引言：为什么你必须了解{topic}"
+    sections:
+      - title: "行业现状与变革信号"
+        target_chars: 1200
+        elements: [case_study, statistics]
+      - title: "这项技术将如何改变你的工作方式"
+        target_chars: 1000
+        elements: [scenario, comparison]
+      - title: "本文档的阅读指南与学习路径"
+        target_chars: 800
+        elements: [roadmap]
+
+  - title: "基础概念：从零建立认知框架"
+    sections:
+      - title: "核心概念与定义"
+        target_chars: 1200
+        elements: [definition, analogy]
+      - title: "发展简史与关键里程碑"
+        target_chars: 1000
+        elements: [timeline]
+      - title: "与相关技术的关系图谱"
+        target_chars: 1000
+        elements: [comparison_table]
+      - title: "必须掌握的前置知识"
+        target_chars: 800
+        elements: [checklist]
+
+  - title: "核心原理深度拆解"
+    sections:
+      - title: "底层架构与设计思想"
+        target_chars: 1500
+        elements: [diagram, code_example]
+      - title: "关键算法与数学直觉"
+        target_chars: 1500
+        elements: [formula, intuition]
+      - title: "技术细节逐层解析"
+        target_chars: 1500
+        elements: [deep_dive, code_example]
+      - title: "常见误解与澄清"
+        target_chars: 1000
+        elements: [myth_busting]
+
+  - title: "技术选型与生态全景"
+    sections:
+      - title: "主流框架/工具横向对比"
+        target_chars: 1500
+        elements: [comparison_table, pros_cons]
+      - title: "选型决策树：如何根据场景选择"
+        target_chars: 1200
+        elements: [decision_tree]
+      - title: "生态系统与社区资源"
+        target_chars: 1000
+        elements: [resource_list]
+
+  - title: "前沿进展与趋势 (2025-2026)"
+    sections:
+      - title: "最新研究突破"
+        target_chars: 1200
+        elements: [paper_review]
+      - title: "行业应用新动向"
+        target_chars: 1200
+        elements: [case_study]
+      - title: "头部公司技术路线对比"
+        target_chars: 1200
+        elements: [comparison]
+      - title: "未来 6-12 个月预测"
+        target_chars: 1000
+        elements: [prediction]
+
+  - title: "环境搭建与工具链"
+    sections:
+      - title: "开发环境一键配置"
+        target_chars: 1200
+        elements: [code_example, step_by_step]
+      - title: "必备工具清单与安装"
+        target_chars: 1000
+        elements: [checklist, code_example]
+      - title: "常见环境问题排查"
+        target_chars: 1000
+        elements: [troubleshooting]
+
+  - title: "实战教程：Hello World 到生产级"
+    sections:
+      - title: "第一个简单示例"
+        target_chars: 1500
+        elements: [code_example, step_by_step]
+      - title: "进阶实战：完整项目搭建"
+        target_chars: 2000
+        elements: [code_example, architecture]
+      - title: "代码逐行详解"
+        target_chars: 1500
+        elements: [code_walkthrough]
+      - title: "调试技巧与常见错误"
+        target_chars: 1200
+        elements: [troubleshooting, tips]
+
+  - title: "高级技巧与性能优化"
+    sections:
+      - title: "性能瓶颈分析方法"
+        target_chars: 1200
+        elements: [profiling, metrics]
+      - title: "优化策略与最佳实践"
+        target_chars: 1500
+        elements: [best_practices, code_example]
+      - title: "规模化部署方案"
+        target_chars: 1200
+        elements: [architecture, deployment]
+      - title: "成本控制与资源管理"
+        target_chars: 1000
+        elements: [cost_analysis]
+
+  - title: "真实案例分析"
+    sections:
+      - title: "案例一：从 0 到 1 的创业项目"
+        target_chars: 1500
+        elements: [case_study, lessons_learned]
+      - title: "案例二：大厂内部的技术落地"
+        target_chars: 1500
+        elements: [case_study, architecture]
+      - title: "案例三：个人开发者的变现之路"
+        target_chars: 1500
+        elements: [case_study, revenue]
+      - title: "失败案例复盘与教训"
+        target_chars: 1200
+        elements: [postmortem]
+
+  - title: "商业变现路径"
+    sections:
+      - title: "技术变现的 5 种模式"
+        target_chars: 1500
+        elements: [framework, examples]
+      - title: "如何用这项技术赚到第一笔钱"
+        target_chars: 1500
+        elements: [step_by_step, actionable]
+      - title: "定价策略与市场定位"
+        target_chars: 1000
+        elements: [strategy]
+      - title: "个人品牌与影响力构建"
+        target_chars: 1000
+        elements: [tips, actionable]
+
+  - title: "常见问题与进阶资源"
+    sections:
+      - title: "FAQ：50 个高频问题解答"
+        target_chars: 2000
+        elements: [qa_list]
+      - title: "推荐学习资源清单"
+        target_chars: 1000
+        elements: [resource_list]
+      - title: "社区与交流渠道"
+        target_chars: 800
+        elements: [community]
+
+  - title: "附录"
+    sections:
+      - title: "专业术语表"
+        target_chars: 1500
+        elements: [glossary]
+      - title: "参考文献与延伸阅读"
+        target_chars: 800
+        elements: [bibliography]

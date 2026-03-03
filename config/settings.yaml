@@ -1,0 +1,204 @@
+# ============================================================
+# 教学文档自动生成系统 - 全局配置
+# ============================================================
+
+# --- LLM 模型提供商配置 ---
+# 支持任何 OpenAI 兼容的 API（DeepSeek, Kimi, Zhipu, Qwen, 等）
+# 也原生支持 Anthropic 和 Google GenAI
+providers:
+  deepseek:
+    type: openai_compatible     # openai_compatible | anthropic | google
+    api_key: "${DEEPSEEK_API_KEY}"  # 支持环境变量引用
+    base_url: "https://api.deepseek.com/v1"
+    model: "deepseek-chat"
+    max_tokens: 4096
+    temperature: 0.7
+
+  openai:
+    type: openai_compatible
+    api_key: "${OPENAI_API_KEY}"
+    base_url: "https://api.openai.com/v1"
+    model: "gpt-4o"
+    max_tokens: 4096
+    temperature: 0.7
+
+  anthropic:
+    type: anthropic
+    api_key: "${ANTHROPIC_API_KEY}"
+    model: "claude-sonnet-4-20250514"
+    max_tokens: 4096
+    temperature: 0.7
+
+  google:
+    type: google
+    api_key: "${GOOGLE_API_KEY}"
+    model: "gemini-2.5-flash"
+    max_tokens: 4096
+    temperature: 0.7
+
+  kimi:
+    type: openai_compatible
+    api_key: "${KIMI_API_KEY}"
+    base_url: "https://api.moonshot.cn/v1"
+    model: "moonshot-v1-128k"
+    max_tokens: 4096
+    temperature: 0.7
+
+  zhipu:
+    type: openai_compatible
+    api_key: "${ZHIPU_API_KEY}"
+    base_url: "https://open.bigmodel.cn/api/paas/v4"
+    model: "glm-4-plus"
+    max_tokens: 4096
+    temperature: 0.7
+
+  qwen:
+    type: openai_compatible
+    api_key: "${QWEN_API_KEY}"
+    base_url: "https://dashscope.aliyuncs.com/compatible-mode/v1"
+    model: "qwen-plus"
+    max_tokens: 4096
+    temperature: 0.7
+
+  # 自定义第三方 API（任何 OpenAI 兼容的服务）
+  custom:
+    type: openai_compatible
+    api_key: "${CUSTOM_API_KEY}"
+    base_url: "${CUSTOM_BASE_URL}"
+    model: "${CUSTOM_MODEL}"
+    max_tokens: 4096
+    temperature: 0.7
+
+# --- 角色分配 ---
+# 将不同的 pipeline 阶段分配给不同的模型
+roles:
+  outline: "openai"           # 大纲生成
+  draft: "openai"             # 初稿撰写
+  critique: "openai"          # 内容评审
+  humanize: "openai"          # 风格人性化
+  review: "openai"            # 最终质检
+  summarize: "openai"         # 摘要生成（滚动上下文）
+
+# --- 管道配置 ---
+pipeline:
+  # 生成目标
+  target_chars: 50000           # 目标总字数（中文字符）
+  min_chars: 45000              # 最低字数
+  max_chars: 80000              # 最高字数
+
+  # 微节参数
+  section_min_chars: 700        # 每节最少字数
+  section_max_chars: 1500       # 每节最多字数
+  sections_per_chapter: 6       # 每章节数
+
+  # 多轮生成
+  draft_revise_rounds: 2        # 草稿-评审-修改轮数
+  max_retry: 3                  # 单次 API 调用最大重试次数
+
+  # 并行控制
+  parallel_sections: 3          # 同时生成的节数
+  parallel_chapters: 1          # 同时生成的章数
+
+  # 全局记忆
+  rolling_summary_max_chars: 2000   # 滚动摘要最大长度
+  glossary_max_terms: 200           # 术语表最大条目
+
+# --- 信息采集配置 ---
+ingestion:
+  # 搜索引擎
+  search_engine: "duckduckgo"   # duckduckgo | serper | google
+  serper_api_key: "${SERPER_API_KEY}"
+  max_search_results: 10
+
+  # arXiv
+  arxiv_max_results: 20
+  arxiv_sort_by: "relevance"    # relevance | lastUpdatedDate | submittedDate
+
+  # 网页抓取
+  scrape_timeout: 30            # 秒
+  max_pages_per_source: 5
+  user_agent: "DocGenerator/1.0"
+
+  # 本地文档采集
+  local_doc_max_chars: 30000
+
+  # 向量数据库
+  vector_db: "chromadb"         # chromadb
+  embedding_model: "all-MiniLM-L6-v2"
+  chunk_size: 500               # 字符
+  chunk_overlap: 50
+  top_k: 5                      # RAG 检索 top-k
+
+# --- 风格人性化配置 ---
+humanizer:
+  # 当前使用的人设
+  active_persona: "veteran_architect"
+
+  # 句式分布目标
+  sentence_variety:
+    short_ratio: 0.20           # 短句（<15字）占比
+    question_ratio: 0.15        # 设问句占比
+    exclamation_ratio: 0.05     # 感叹句占比
+
+  # AI 高频词黑名单（生成时禁止使用）
+  blacklisted_words:
+    - "总之"
+    - "综上所述"
+    - "深入浅出"
+    - "值得注意的是"
+    - "不仅如此"
+    - "需要指出的是"
+    - "毋庸置疑"
+    - "显而易见"
+    - "不言而喻"
+    - "众所周知"
+    - "由此可见"
+    - "换言之"
+    - "简而言之"
+    - "一言以蔽之"
+    - "与此同时"
+    - "在这个过程中"
+    - "从某种意义上说"
+    - "不可否认"
+    - "令人惊叹"
+    - "令人瞩目"
+
+# --- 输出配置 ---
+output:
+  formats: ["markdown", "docx"]   # markdown | docx | pdf | html
+  output_dir: "data/output"
+  include_toc: true               # 生成目录
+  include_glossary: true          # 生成术语表
+  include_references: true        # 生成参考文献
+
+# --- 出版渲染配置 ---
+render:
+  pdf:
+    enabled: true
+    unfenced_code_fallback: true
+    theme:
+      font: "SimHei"
+      body_size: 11.2
+      line_height: 18.5
+      h2_size: 16
+      h2_leading: 24
+      h3_size: 13
+      h3_leading: 20
+      heading_color: "#111827"
+      subheading_color: "#1F2937"
+      body_color: "#111827"
+      warning_bg: "#FFF9C4"
+      warning_color: "#4B5563"
+      margin_left_mm: 18
+      margin_right_mm: 18
+      margin_top_mm: 16
+      margin_bottom_mm: 14
+  illustration:
+    mode: "placeholder"          # none | placeholder | generated
+    slots: []                     # e.g. [1,4,8]
+    images_by_title: {}           # {"标题关键词": "path/to/image.png"}
+
+# --- 日志 ---
+logging:
+  level: "INFO"                   # DEBUG | INFO | WARNING | ERROR
+  file: "data/generation.log"

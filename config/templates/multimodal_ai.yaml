@@ -1,0 +1,67 @@
+# 多模态 AI 课程模板
+meta:
+  name: "多模态AI：视觉×语言×音频的融合之道"
+  target_chars: 55000
+  tone: "前沿研究导向，兼顾工程实践"
+
+chapters:
+  - title: "多模态AI：下一个十年的主战场"
+    sections:
+      - { title: "为什么多模态是AI的终极形态", target_chars: 1200 }
+      - { title: "从 CLIP 到 GPT-4o：多模态简史", target_chars: 1500 }
+      - { title: "2025-2026 多模态全景图", target_chars: 1200 }
+
+  - title: "视觉语言模型 (VLM) 核心原理"
+    sections:
+      - { title: "视觉编码器：ViT 与变体", target_chars: 1500 }
+      - { title: "跨模态对齐：CLIP / SigLIP", target_chars: 1500 }
+      - { title: "视觉-语言融合架构对比", target_chars: 1500 }
+      - { title: "图像理解 vs 图像生成：两条技术路线", target_chars: 1200 }
+
+  - title: "图像生成技术深度解析"
+    sections:
+      - { title: "Diffusion Model 从入门到精通", target_chars: 2000 }
+      - { title: "Stable Diffusion / DALL-E / Midjourney 原理对比", target_chars: 1500 }
+      - { title: "ControlNet / IP-Adapter 可控生成", target_chars: 1500 }
+      - { title: "视频生成：Sora 与竞品分析", target_chars: 1500 }
+
+  - title: "语音与音频智能"
+    sections:
+      - { title: "语音识别：Whisper 与端到端方案", target_chars: 1200 }
+      - { title: "语音合成：从 TTS 到情感语音", target_chars: 1200 }
+      - { title: "语音对话系统架构", target_chars: 1200 }
+      - { title: "音乐/音效生成前沿", target_chars: 1000 }
+
+  - title: "多模态大模型实战"
+    sections:
+      - { title: "GPT-4o / Claude / Gemini 多模态能力对比", target_chars: 1500 }
+      - { title: "多模态 API 调用实战", target_chars: 1500, elements: [code_example] }
+      - { title: "文档理解与表格提取", target_chars: 1500, elements: [code_example] }
+      - { title: "视频理解与分析", target_chars: 1200 }
+
+  - title: "多模态应用开发"
+    sections:
+      - { title: "图文搜索引擎构建", target_chars: 1500, elements: [code_example] }
+      - { title: "AI 设计助手开发", target_chars: 1500, elements: [code_example] }
+      - { title: "多模态 RAG 系统", target_chars: 1500 }
+      - { title: "多模态 Agent 实现", target_chars: 1200 }
+
+  - title: "训练与微调多模态模型"
+    sections:
+      - { title: "多模态数据采集与标注", target_chars: 1200 }
+      - { title: "视觉语言模型微调", target_chars: 1500, elements: [code_example] }
+      - { title: "图像生成模型定制化训练", target_chars: 1500 }
+      - { title: "评估指标与 Benchmark", target_chars: 1200 }
+
+  - title: "落地案例与商业化"
+    sections:
+      - { title: "电商场景：AI 商品图/视频生成", target_chars: 1500 }
+      - { title: "教育场景：多模态教学助手", target_chars: 1200 }
+      - { title: "医疗场景：影像分析与报告生成", target_chars: 1200 }
+      - { title: "创意产业：AI 辅助设计与创作", target_chars: 1200 }
+
+  - title: "附录"
+    sections:
+      - { title: "多模态术语表", target_chars: 1200 }
+      - { title: "主流多模态模型速查表", target_chars: 1000 }
+      - { title: "推荐论文与资源", target_chars: 800 }

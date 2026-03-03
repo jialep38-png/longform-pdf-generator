@@ -1,0 +1,77 @@
+# LLM 工程课程模板
+meta:
+  name: "大语言模型工程实战"
+  target_chars: 60000
+  tone: "工程导向，注重可复现性，代码为主"
+
+chapters:
+  - title: "大模型时代的全景图"
+    sections:
+      - { title: "从 GPT 到多模态：LLM 发展脉络", target_chars: 1500 }
+      - { title: "开源 vs 闭源：2025-2026 格局", target_chars: 1200 }
+      - { title: "LLM 工程师的能力模型", target_chars: 1000 }
+
+  - title: "Transformer 架构精讲"
+    sections:
+      - { title: "Attention 机制的数学本质", target_chars: 1500 }
+      - { title: "位置编码的演进：从绝对到 RoPE", target_chars: 1200 }
+      - { title: "KV Cache 与推理加速原理", target_chars: 1200 }
+      - { title: "MoE 架构与 DeepSeek 的创新", target_chars: 1200 }
+
+  - title: "Prompt Engineering 系统化方法论"
+    sections:
+      - { title: "Prompt 设计的第一性原理", target_chars: 1500 }
+      - { title: "结构化 Prompt 模板库", target_chars: 2000, elements: [code_example] }
+      - { title: "Few-shot / Chain-of-Thought / ReAct 对比", target_chars: 1500 }
+      - { title: "Prompt 自动优化与评估", target_chars: 1200 }
+
+  - title: "RAG 检索增强生成"
+    sections:
+      - { title: "RAG 架构全解析", target_chars: 1500 }
+      - { title: "向量数据库选型指南", target_chars: 1200 }
+      - { title: "分块策略与嵌入模型选择", target_chars: 1200 }
+      - { title: "高级 RAG：HyDE / Multi-Query / GraphRAG", target_chars: 1500 }
+      - { title: "RAG 评估体系与优化", target_chars: 1200 }
+
+  - title: "微调实战"
+    sections:
+      - { title: "全量微调 vs LoRA vs QLoRA 原理对比", target_chars: 1500 }
+      - { title: "数据准备与清洗流程", target_chars: 1200 }
+      - { title: "手把手 LoRA 微调教程", target_chars: 2000, elements: [code_example] }
+      - { title: "训练监控与超参调优", target_chars: 1200 }
+      - { title: "模型评估与部署", target_chars: 1200 }
+
+  - title: "AI Agent 开发"
+    sections:
+      - { title: "Agent 架构设计模式", target_chars: 1500 }
+      - { title: "工具调用与 Function Calling", target_chars: 1500, elements: [code_example] }
+      - { title: "多 Agent 协作框架", target_chars: 1200 }
+      - { title: "记忆系统设计", target_chars: 1200 }
+      - { title: "Agent 安全与可控性", target_chars: 1000 }
+
+  - title: "模型部署与推理优化"
+    sections:
+      - { title: "vLLM / TGI / Ollama 部署方案对比", target_chars: 1500 }
+      - { title: "量化技术：GPTQ / AWQ / GGUF", target_chars: 1200 }
+      - { title: "推理成本优化策略", target_chars: 1200 }
+      - { title: "生产环境最佳实践", target_chars: 1200 }
+
+  - title: "LLM 应用架构设计"
+    sections:
+      - { title: "端到端 LLM 应用架构", target_chars: 1500 }
+      - { title: "流式输出与用户体验", target_chars: 1000 }
+      - { title: "安全防护：注入攻击与防御", target_chars: 1200 }
+      - { title: "监控、日志与可观测性", target_chars: 1200 }
+
+  - title: "商业落地案例"
+    sections:
+      - { title: "智能客服系统实战", target_chars: 1500 }
+      - { title: "文档智能处理平台", target_chars: 1500 }
+      - { title: "代码助手开发全流程", target_chars: 1500 }
+      - { title: "ROI 分析与商业模式", target_chars: 1200 }
+
+  - title: "附录"
+    sections:
+      - { title: "术语表", target_chars: 1500 }
+      - { title: "常用 Prompt 模板合集", target_chars: 2000 }
+      - { title: "推荐论文与资源", target_chars: 1000 }
